@@ -6,7 +6,7 @@ variables:
     releaseBranchName: 'merge-test'
   
 schedules:
-  - cron: '35 13 * * *'
+  - cron: '50 14 * * *'
     displayName: 'Deploy every day at 3 A.M.'
     branches:
       include:
@@ -95,7 +95,7 @@ stages:
         displayName: 'Publish the project - $(buildConfiguration)'
         inputs:
           command: 'publish'
-          projects: '**/*.csproj'
+          projects: '**/*web.csproj'
           publishWebProjects: false
           arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
           zipAfterPublish: true
