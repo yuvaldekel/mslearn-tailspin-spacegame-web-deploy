@@ -4,9 +4,10 @@ trigger:
 variables:
     buildConfiguration: 'Release'
     releaseBranchName: 'ui-unit-tests'
-  
+    dotnetSdkVersion: '6.x'
+
 schedules:
-  - cron: '20 20 * * *'
+  - cron: '32 20 * * *'
     displayName: 'Deploy every day at 3 A.M.'
     branches:
       include:
