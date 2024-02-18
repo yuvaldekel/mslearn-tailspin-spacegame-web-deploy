@@ -6,7 +6,7 @@ variables:
     releaseBranchName: 'ui-unit-tests'
   
 schedules:
-  - cron: '15 20 * * *'
+  - cron: '20 20 * * *'
     displayName: 'Deploy every day at 3 A.M.'
     branches:
       include:
