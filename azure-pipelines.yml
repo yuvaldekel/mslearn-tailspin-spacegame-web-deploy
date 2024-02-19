@@ -7,7 +7,7 @@ variables:
     dotnetSdkVersion: '6.x'
 
 schedules:
-  - cron: '50 14 * * *'
+  - cron: '35 15 * * *'
     displayName: 'Deploy every day at 3 A.M.'
     branches:
       include:
@@ -226,3 +226,4 @@ stages:
       - task: PublishTestResults@2
         inputs:
           testResultsFormat: JUnit
+          testResultsFiles: JUnit.xml
